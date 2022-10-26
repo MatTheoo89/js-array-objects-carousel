@@ -20,8 +20,8 @@ const locations = [
     image: 'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg'
   },
   {
-    country: 'Perù'
-    description: 'Lima, la capitale del Perù, sorge sull\'arida costa del Pacifico.'
+    country: 'Perù',
+    description: 'Lima, la capitale del Perù, sorge sull\'arida costa del Pacifico.',
     image: 'https://static1.evcdn.net/images/reduction/1513757_w-1920_h-1080_q-70_m-crop.jpg'
   },
   {
@@ -36,7 +36,19 @@ const locations = [
   },
   {
     country: 'Colombia',
-    description: 'Bogotá è l'ampia capitale ad alta quota della Colombia.',
+    description: 'Bogotá è l\'ampia capitale ad alta quota della Colombia.',
     image: 'https://cdn.sanity.io/images/24oxpx4s/prod/ed09eff0362396772ad50ec3bfb728d332eb1c30-3200x2125.jpg?w=1600&h=1063&fit=crop'
   },
 ]
+
+const btnPrev = document.querySelector('#btn-prev');
+const btnNext = document.querySelector('#btn-next');
+const sliderImage = document.querySelector('.slider-image');
+const sliderThumbnails = document.querySelector('.slider-thumbnails');
+
+//console.log(locations);
+//console.log(btnPrev, btnNext, sliderImage, sliderThumbnails);
+// ? Fino qui ok
+
+// Apro la pagina e stampa le immagini contenute nella array ed inizia il carosello
+// Premendo il bottone avant/indietro cambiano le immagini
