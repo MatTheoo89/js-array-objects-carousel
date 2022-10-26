@@ -43,7 +43,7 @@ const locations = [
 
 const btnPrev = document.querySelector('#btn-prev');
 const btnNext = document.querySelector('#btn-next');
-const sliderImage = document.querySelector('.slider-image');
+const sliderImage = document.querySelector('.slider-image-container');
 const sliderThumbnails = document.querySelector('.slider-thumbnails');
 
 console.log(locations);
@@ -60,14 +60,60 @@ console.log(btnPrev, btnNext, sliderImage, sliderThumbnails);
 // se premi su indietro vedi la immaggine prima
 // se premi su avanti vai all'immagine successiva
 
-
-// 1
-locations.map(location => {
+locations.forEach(location => {
   
-  sliderThumbnails.innerHTML += `
-  <img class="" src="${location.image}" alt="${location.country}">
+  sliderImage.innerHTML += `
+  <div class="slider-image hide">
+    <img src="${location.image}" alt="${location.country}">
+
+    <div class="description">
+      <h2>${location.country}</h2>
+      <p>${location.description}</p>
+    </div> 
+
+  </div>
   `
-  console.log(sliderImage.innerHTML);
 });
 
+const sliderImageItems = document.getElementsByClassName('slider-image')
 
+let activeIndex = 0;
+
+sliderImageItems[activeIndex].classList.remove('hide');
+sliderImageItems[activeIndex].classList.add('active');
+
+btnNext.addEventListener('click', function(){
+  if(activeIndex === locations.length - 1){
+
+    sliderImageItems[activeIndex].classList.remove('active');
+    sliderImageItems[activeIndex].classList.add('hide');
+    activeIndex = 0;
+  }
+  else{
+    
+    sliderImageItems[activeIndex].classList.remove('active');
+    sliderImageItems[activeIndex].classList.add('hide');
+    activeIndex++;
+    
+  }
+  sliderImageItems[activeIndex].classList.remove('hide');
+  sliderImageItems[activeIndex].classList.add('active');
+})
+
+
+
+
+
+
+
+
+
+
+
+
+// locations.forEach(location => {
+  
+//   sliderThumbnails.innerHTML += `
+//   <img class="thumb" src="${location.image}" alt="${location.country}">
+//   `
+// });
