@@ -53,9 +53,21 @@ console.log(btnPrev, btnNext, sliderImage, sliderThumbnails);
 // Apro la pagina e stampa le immagini contenute nella array ed inizia il carosello
 // Premendo il bottone avant/indietro cambiano le immagini
 
-//prendi ogni singola città con il suo contenuto
+//1- prendi ogni singola città con il suo contenuto
 // stampa in pagina una immaggine grande con la sua descrizione
 // stampa in pagina una immagine piccola
 // fai cambiare immagine ogni 2 secondi e accendi l'immagine piccola corrispondente
 // se premi su indietro vedi la immaggine prima
 // se premi su avanti vai all'immagine successiva
+
+
+// 1
+locations.map(location => {
+  
+  sliderThumbnails.innerHTML += `
+  <img class="" src="${location.image}" alt="${location.country}">
+  `
+  console.log(sliderImage.innerHTML);
+});
+
+
