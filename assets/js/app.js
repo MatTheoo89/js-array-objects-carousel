@@ -46,8 +46,8 @@ const btnNext = document.querySelector('#btn-next');
 const sliderImage = document.querySelector('.slider-image-container');
 const sliderThumbnails = document.querySelector('.slider-thumbnails');
 
-console.log(locations);
-console.log(btnPrev, btnNext, sliderImage, sliderThumbnails);
+//console.log(locations);
+//console.log(btnPrev, btnNext, sliderImage, sliderThumbnails);
 // ? Fino qui ok
 
 // Apro la pagina e stampa le immagini contenute nella array ed inizia il carosello
@@ -75,16 +75,27 @@ locations.forEach(location => {
   `
 });
 
+locations.forEach(location => {
+  
+  sliderThumbnails.innerHTML += `
+  <div class="thumb">
+    <img src="${location.image}" alt="${location.country}">
+  </div>
+  `
+});
+
+
+
+
 const sliderImageItems = document.getElementsByClassName('slider-image');
-const sliderThumbnailsItems = document.getElementsByClassName('thumb');
-//console.log(sliderImageItems);
-console.log(sliderThumbnailsItems);
+const sliderThumbsItems = document.getElementsByClassName('thumb');
+//console.log(sliderThumbsItems);
 
 let activeIndex = 0;
 
 sliderImageItems[activeIndex].classList.remove('hide');
 sliderImageItems[activeIndex].classList.add('active');
-// sliderThumbnailsItems[activeIndex].classList.add('active');
+sliderThumbsItems[activeIndex].classList.add('active');
 //console.log(sliderThumbnailsItems[activeIndex]);
 
 btnNext.addEventListener('click', function(){
@@ -92,17 +103,20 @@ btnNext.addEventListener('click', function(){
 
     sliderImageItems[activeIndex].classList.remove('active');
     sliderImageItems[activeIndex].classList.add('hide');
+    sliderThumbsItems[activeIndex].classList.remove('active');
     activeIndex = 0;
   }
   else{
     
     sliderImageItems[activeIndex].classList.remove('active');
     sliderImageItems[activeIndex].classList.add('hide');
+    sliderThumbsItems[activeIndex].classList.remove('active');
     activeIndex++;
     
   }
   sliderImageItems[activeIndex].classList.remove('hide');
   sliderImageItems[activeIndex].classList.add('active');
+  sliderThumbsItems[activeIndex].classList.add('active');
 });
 
 btnPrev.addEventListener('click', function(){
@@ -110,35 +124,18 @@ btnPrev.addEventListener('click', function(){
 
     sliderImageItems[activeIndex].classList.remove('active');
     sliderImageItems[activeIndex].classList.add('hide');
+    sliderThumbsItems[activeIndex].classList.remove('active');
     activeIndex = locations.length - 1;
   }
   else{
     
     sliderImageItems[activeIndex].classList.remove('active');
     sliderImageItems[activeIndex].classList.add('hide');
+    sliderThumbsItems[activeIndex].classList.remove('active');
     activeIndex--;
     
   }
   sliderImageItems[activeIndex].classList.remove('hide');
   sliderImageItems[activeIndex].classList.add('active');
-});
-
-
-
-
-
-
-
-
-
-
-
-
-locations.forEach(location => {
-  
-  sliderThumbnails.innerHTML += `
-  <div class="thumb">
-  <img src="${location.image}" alt="${location.country}">
-  </div>
-  `
+  sliderThumbsItems[activeIndex].classList.add('active');
 });

@@ -12,18 +12,32 @@ img {
   max-width: 100%;
 }
 
+h2 {
+  color: #ff9505;
+}
+
+p {
+  color: #e2711d;
+  font-size: 1.5rem;
+  padding-left: 40px;
+}
+
 h2,
 p {
-  color: #fff;
-  text-shadow: 3px 3px 2px rgba(0, 0, 0, .4);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
   letter-spacing: 2px;
 }
 
 i {
   color: #fff;
   padding: 15px;
-  background-color: rgba(250, 250, 250, 0.5);
+  background-color: rgba(21, 189, 169, 0.5);
   border-radius: 50%;
+}
+
+i:hover {
+  background-color: rgba(21, 189, 169, 0.85);
+
 }
 
 .main-wrapper {
@@ -43,18 +57,19 @@ i {
 }
 
 .slider .description {
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, .2);
   padding: 10px;
   border-radius: 10px;
   position: absolute;
   top: 10px;
   right: 20px;
-  width: 60%;
+  width: 70%;
 }
 
 .slider .description h2 {
   text-align: right;
-  font-size: 2rem;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 .slider-image-container {
@@ -79,13 +94,14 @@ i {
 
 .slider-thumbnails .thumb {
   width: calc(100% / 5);
+  filter: brightness(.3);
+
 }
 
 .slider-thumbnails img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  filter: brightness(.4);
 }
 
 .slider .button {
@@ -100,7 +116,6 @@ i.btn-prev {
   bottom: 50%;
   left: 10px;
   transform: translateY(50%);
-
 }
 
 i.btn-next {
@@ -111,7 +126,7 @@ i.btn-next {
 }
 
 .thumb.active {
-  border: 2px solid whitesmoke;
+  border: 4px solid whitesmoke;
   filter: brightness(1);
 }
 
