@@ -75,12 +75,17 @@ locations.forEach(location => {
   `
 });
 
-const sliderImageItems = document.getElementsByClassName('slider-image')
+const sliderImageItems = document.getElementsByClassName('slider-image');
+const sliderThumbnailsItems = document.getElementsByClassName('thumb');
+//console.log(sliderImageItems);
+console.log(sliderThumbnailsItems);
 
 let activeIndex = 0;
 
 sliderImageItems[activeIndex].classList.remove('hide');
 sliderImageItems[activeIndex].classList.add('active');
+// sliderThumbnailsItems[activeIndex].classList.add('active');
+//console.log(sliderThumbnailsItems[activeIndex]);
 
 btnNext.addEventListener('click', function(){
   if(activeIndex === locations.length - 1){
@@ -129,9 +134,11 @@ btnPrev.addEventListener('click', function(){
 
 
 
-// locations.forEach(location => {
+locations.forEach(location => {
   
-//   sliderThumbnails.innerHTML += `
-//   <img class="thumb" src="${location.image}" alt="${location.country}">
-//   `
-// });
+  sliderThumbnails.innerHTML += `
+  <div class="thumb">
+  <img src="${location.image}" alt="${location.country}">
+  </div>
+  `
+});

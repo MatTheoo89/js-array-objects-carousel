@@ -77,10 +77,13 @@ i {
   background-color: rgb(16, 146, 146);
 }
 
+.slider-thumbnails .thumb {
+  width: calc(100% / 5);
+}
 
 .slider-thumbnails img {
   height: 100%;
-  width: calc(100% / 5);
+  width: 100%;
   object-fit: cover;
   filter: brightness(.4);
 }
@@ -107,7 +110,7 @@ i.btn-next {
   transform: translateY(50%);
 }
 
-img.active {
+.thumb.active {
   border: 2px solid whitesmoke;
   filter: brightness(1);
 }
