@@ -57,7 +57,7 @@ i {
 }
 
 .slider-image {
-  height: 70%;
+  height: 80%;
   width: 100%;
   background-color: azure;
 }
@@ -70,7 +70,7 @@ i {
 
 .slider-thumbnails {
   display: flex;
-  height: 30%;
+  height: 20%;
   width: 100%;
   background-color: rgb(16, 146, 146);
 }
@@ -85,13 +85,13 @@ i {
 
 i.btn-prev {
   position: absolute;
-  bottom: 10%;
+  bottom: 8%;
   left: 10px;
 }
 
 i.btn-next {
   position: absolute;
-  bottom: 10%;
+  bottom: 8%;
   right: 10px;
 }
 

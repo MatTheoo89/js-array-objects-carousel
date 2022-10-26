@@ -46,9 +46,16 @@ const btnNext = document.querySelector('#btn-next');
 const sliderImage = document.querySelector('.slider-image');
 const sliderThumbnails = document.querySelector('.slider-thumbnails');
 
-//console.log(locations);
-//console.log(btnPrev, btnNext, sliderImage, sliderThumbnails);
+console.log(locations);
+console.log(btnPrev, btnNext, sliderImage, sliderThumbnails);
 // ? Fino qui ok
 
 // Apro la pagina e stampa le immagini contenute nella array ed inizia il carosello
 // Premendo il bottone avant/indietro cambiano le immagini
+
+//prendi ogni singola città con il suo contenuto
+// stampa in pagina una immaggine grande con la sua descrizione
+// stampa in pagina una immagine piccola
+// fai cambiare immagine ogni 2 secondi e accendi l'immagine piccola corrispondente
+// se premi su indietro vedi la immaggine prima
+// se premi su avanti vai all'immagine successiva
