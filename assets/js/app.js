@@ -98,7 +98,25 @@ btnNext.addEventListener('click', function(){
   }
   sliderImageItems[activeIndex].classList.remove('hide');
   sliderImageItems[activeIndex].classList.add('active');
-})
+});
+
+btnPrev.addEventListener('click', function(){
+  if(activeIndex === 0){
+
+    sliderImageItems[activeIndex].classList.remove('active');
+    sliderImageItems[activeIndex].classList.add('hide');
+    activeIndex = locations.length - 1;
+  }
+  else{
+    
+    sliderImageItems[activeIndex].classList.remove('active');
+    sliderImageItems[activeIndex].classList.add('hide');
+    activeIndex--;
+    
+  }
+  sliderImageItems[activeIndex].classList.remove('hide');
+  sliderImageItems[activeIndex].classList.add('active');
+});
 
 
 
